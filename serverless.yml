@@ -1,4 +1,4 @@
-service: serverless-flask
+service: futurice-calculator
 plugins:
   - serverless-python-requirements
   - serverless-wsgi
@@ -7,7 +7,7 @@ custom:
     app: app.app
     packRequirements: false
   pythonRequirements:
-    dockerizePip: false
+    dockerizePip: true
 package:
   exclude:
     - node_modules/**
