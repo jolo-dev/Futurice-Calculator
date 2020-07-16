@@ -7,5 +7,24 @@
   "editor.formatOnSave": true,
   "[python]": {
     "editor.tabSize": 4
-  }
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#cdb9f8",
+    "activityBar.activeBorder": "#e85917",
+    "activityBar.background": "#cdb9f8",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#e85917",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#ac8bf3",
+    "statusBar.border": "#ac8bf3",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#8b5dee",
+    "titleBar.activeBackground": "#ac8bf3",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.border": "#ac8bf3",
+    "titleBar.inactiveBackground": "#ac8bf399",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#ac8bf3"
 }
