@@ -1,6 +1,6 @@
 # Futurice Calculator
 
-This is a calculator built with [Python's Flask](https://flask.palletsprojects.com/en/1.1.x/) with is deployable by using [Serverless](https://github.com/serverless/serverless) on AWS
+This is a calculator built with [Python's Flask](https://flask.palletsprojects.com/en/1.1.x/) and it is deployable by using [Serverless](https://github.com/serverless/serverless) on AWS
 
 ## Usage
 
@@ -58,3 +58,6 @@ custom to your use case. This includes:
 - Where to deploy
 - Whether you have Docker setup, which assists in packaging dependencies. For more info, check out [this post on managing your Python packages with Serverless](https://serverless.com/blog/serverless-python-packaging/);
 - Whether you want to set up a custom domain that you own, rather than a random assigned one from AWS. For more details on that, look at [this post on setting up a custom domain with API Gateway and Serverless](https://serverless.com/blog/serverless-api-gateway-domain/).
+
+# Demo
+A demo result can be found [here](https://ahhsyc6k83.execute-api.eu-central-1.amazonaws.com/dev)
