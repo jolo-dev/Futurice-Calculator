@@ -1,6 +1,6 @@
 # Futurice Calculator
 
-This is a calculator built with [Python's Flask](https://flask.palletsprojects.com/en/1.1.x/) with is deployable by using [Serverless](https://github.com/serverless/serverless) on AWS
+This is a calculator built with [Python's Flask](https://flask.palletsprojects.com/en/1.1.x/) with is deployable by using [Zappa](https://github.com/serverless/serverless) on AWS
 
 ## Usage
 
