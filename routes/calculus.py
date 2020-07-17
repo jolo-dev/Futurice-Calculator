@@ -5,6 +5,7 @@ import json
 
 def configure_routes(app):
     @app.route("/calculus", methods=["GET", "POST"])
+    @app.route("/dev/calculus", methods=["GET", "POST"])
     def calculus():
         if request.method == "POST":
             query = convert_to_base64(request.form["calculus-string"])
@@ -22,7 +23,7 @@ def configure_routes(app):
                     error = True
                     status = 406
             except:
-                result = "Error with your input: " + query
+                result = "Error with your input: " + str(query)
                 error = True
                 status = 406
         else:
