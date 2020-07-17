@@ -8,7 +8,6 @@ def configure_routes(app):
     def calculus():
         if request.method == "POST":
             query = convert_to_base64(request.form["calculus-string"])
-            print(query)
         elif request.method == "GET":
             query = request.args.get("query")
         if len(query) >= 4:
@@ -17,16 +16,20 @@ def configure_routes(app):
                 result = eval(checked_query)
                 if isfloat(result):
                     status = 200
+                    error = False
                 else:
                     result = "Error with your input: " + query
+                    error = True
                     status = 406
             except:
                 result = "Error with your input: " + query
+                error = True
                 status = 406
         else:
             result = "Please provide a data character >= 4"
+            error = True
             status = 406
-        return {"result": result, "status": status}, status
+        return {"result": result, "error": error}, status
 
 
 def convert_to_base64(string):

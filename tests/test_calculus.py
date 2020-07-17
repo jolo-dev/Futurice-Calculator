@@ -28,48 +28,49 @@ def test_check_padding_same_formula(client):
     assert result1 == result2
 
 
+def test_convert_string_to_base64(client):
+    b64_string = convert_to_base64("1")
+    assert b64_string == b"MQ=="
+
+
 def test_calculus_1_plus_1(client):
     response = client.get("/calculus?query=MSsx")
-    mocked_result = {"result": 2, "status": 200}
+    mocked_result = {"result": 2, "error": False}
     assert response.status_code == 200
     assert json.loads(response.get_data()) == mocked_result
 
 
 def test_calculus_1(client):
     response = client.get("/calculus?query=MQ==")
-    mocked_result = {"result": 1, "status": 200}
+    mocked_result = {"result": 1, "error": False}
     assert response.status_code == 200
     assert json.loads(response.get_data()) == mocked_result
 
 
 def test_calculus_failure(client):
     response = client.get("/calculus?query=A")
-    mocked_result = {"result": "Please provide a data character >= 4", "status": 406}
+    mocked_result = {"result": "Please provide a data character >= 4", "error": True}
     assert response.status_code == 406
     assert json.loads(response.get_data()) == mocked_result
 
 
 def test_calculus_float(client):
     response = client.get("/calculus?query=MS8z")
-    mocked_result = {"result": 0.3333333333333333, "status": 200}
+    mocked_result = {"result": 0.3333333333333333, "error": False}
     assert response.status_code == 200
     assert json.loads(response.get_data()) == mocked_result
 
 
 def test_calculus_negative_float(client):
     response = client.get("/calculus?query=MiAqICgyMy8oMyozKSktIDIzICogKDIqMyk")
-    mocked_result = {"result": -132.88888888888889, "status": 200}
+    mocked_result = {"result": -132.88888888888889, "error": False}
     assert response.status_code == 200
     assert json.loads(response.get_data()) == mocked_result
 
 
 def test_calculus_not_a_formula(client):
     response = client.get("/calculus?query=QUJDRA==")
-    mocked_result = {"result": "Error with your input: QUJDRA==", "status": 406}
+    mocked_result = {"result": "Error with your input: QUJDRA==", "error": True}
     assert response.status_code == 406
     assert json.loads(response.get_data()) == mocked_result
 
-
-def test_convert_string_to_base64(client):
-    b64_string = convert_to_base64("1")
-    assert b64_string == b"MQ=="
