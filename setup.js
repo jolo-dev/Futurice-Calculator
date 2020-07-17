@@ -18,7 +18,7 @@ const questions = (defaultRegion, regions) => {
       type: 'input',
       name: 'service',
       message: 'Your Service Name',
-      default: 'serverless-flask'
+      default: 'futurice-calculator'
     },
     {
       type: 'list',

@@ -4,9 +4,13 @@ import json
 
 
 def configure_routes(app):
-    @app.route("/calculus")
+    @app.route("/calculus", methods=["GET", "POST"])
     def calculus():
-        query = request.args.get("query")
+        if request.method == "POST":
+            query = convert_to_base64(request.form["calculus-string"])
+            print(query)
+        elif request.method == "GET":
+            query = request.args.get("query")
         if len(query) >= 4:
             checked_query = check_padding(query)
             try:
@@ -23,6 +27,10 @@ def configure_routes(app):
             result = "Please provide a data character >= 4"
             status = 406
         return {"result": result, "status": status}, status
+
+
+def convert_to_base64(string):
+    return base64.b64encode(string.encode("ascii"))
 
 
 def check_padding(b64_string):

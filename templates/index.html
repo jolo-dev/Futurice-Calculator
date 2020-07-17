@@ -12,208 +12,55 @@
       rel="icon"
       href="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/favicon.ico"
     />
-    <title>Serverless Flask App</title>
+    <title>Futurice Calculator</title>
     <!-- Bootstrap core CSS -->
     <link
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-      integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+
     <!-- Custom styles for this template -->
     <style type="text/css">
       body {
         padding-top: 1.5rem;
         padding-bottom: 1.5rem;
       }
-      b,
-      strong {
-        font-weight: 500;
-      }
-      /* Everything but the jumbotron gets side spacing for mobile first views */
-      .header,
-      .marketing,
-      .footer {
-        padding-right: 1rem;
-        padding-left: 1rem;
-      }
-      .jumbotron {
-        padding: 2rem 2rem;
-      }
-      /* Custom page header */
-      .header {
-        padding-bottom: 1rem;
-        border-bottom: 0.05rem solid #e5e5e5;
-      }
-      /* Make the masthead heading the same height as the navigation */
-      .header h3 {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 3rem;
-      }
-      /* Custom page footer */
-      .footer {
-        padding-top: 1.5rem;
-        color: #777;
-        border-top: 0.05rem solid #e5e5e5;
-      }
-      .list li {
-        font-size: 20px;
-        line-height: 36px;
-      }
-      .logo-wrapper {
+      h1 {
         display: flex;
-        align-items: center;
+        align-items: end;
       }
-      .logo {
-        max-width: 250px;
-      }
-      /* Customize container */
-      @media (min-width: 48em) {
-        .container {
-          max-width: 60rem;
-        }
-      }
-      .container-narrow > hr {
-        margin: 2rem 0;
-      }
-      /* Main marketing message and sign up button */
-      .jumbotron {
-        text-align: left;
-        border-bottom: 0.05rem solid #e5e5e5;
-      }
-      .jumbotron .btn {
-        padding: 0.75rem 1.5rem;
-        font-size: 1.5rem;
-      }
-      /* Supporting marketing content */
-      .marketing {
-        margin: 2rem 0;
-      }
-      .marketing p + h4 {
-        margin-top: 1.5rem;
-      }
-      .lead {
-        max-width: 80%;
-      }
-      /* Responsive: Portrait tablets and up */
-      @media screen and (min-width: 48em) {
-        /* Remove the padding we set earlier */
-        .header,
-        .marketing,
-        .footer {
-          padding-right: 0;
-          padding-left: 0;
-        }
-        /* Space out the masthead */
-        .header {
-          margin-bottom: 2rem;
-        }
-        /* Remove the bottom border on the jumbotron for visual effect */
-        .jumbotron {
-          border-bottom: 0;
-        }
-      }
-      /* Mobile view */
-      @media (max-width: 768px) {
-        .logo-wrapper {
-          display: flex;
-          flex-direction: column;
-        }
-        .logo {
-          margin-top: 10px;
-        }
-        .jumbotron h1 {
-          font-size: 26px;
-        }
-        .jumbotron .lead {
-          font-size: 16px;
-          max-width: 100%;
-        }
-        .header h3 {
-          font-size: 24px;
-        }
-      }
-      .col-lg-6 {
-        padding-left: 0px;
+      h1 span {
+        margin-left: 1%;
       }
     </style>
   </head>
-  <body style="">
+  <body>
     <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills float-right">
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="https://serverless.com/framework/docs/providers/aws/guide/intro/"
-                >Docs <span class="sr-only">(current)</span></a
-              >
-            </li>
-          </ul>
-        </nav>
-        <h3 class="text-muted">🐍 Serverless Flask</h3>
-      </div>
-      <div class="jumbotron">
-        <h1>Congrats on deploying your Flask App 🎉</h1>
-        <p class="lead">
-          There are many things you can build with Serverless & Python. The
-          limit is your imagination!
-        </p>
-        <p class="lead">
-          <strong>Here are a couple places we recommend starting:</strong>
-        </p>
-        <ol class="list">
-          <li>
-            <a href="https://serverless.com/blog/serverless-api-gateway-domain/"
-              >Set a custom domain</a
-            >
-          </li>
-          <li>
-            <a href="http://blog.rowanudell.com/using-dyanmodb-with-serverless/"
-              >Add a DynamoDB table</a
-            >
-          </li>
-          <li>
-            <a href="https://serverless.com/blog/serverless-secrets-api-keys/"
-              >Use secret variables</a
-            >
-          </li>
-        </ol>
-      </div>
-      <div>
-        <h4 class="logo-wrapper">
-          <span>This project is powered by</span>
-          <img
-            class="logo"
-            src="https://s3-us-west-2.amazonaws.com/assets.site.serverless.com/logos/serverless_logotype_500x91.png"
+      <h1>
+        <img
+          width="200"
+          src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNDQ4cHgiIGhlaWdodD0iOTBweCIgdmlld0JveD0iMCAwIDQ0OCA5MCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggNDkuMSAoNTExNDcpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPmZ1dHVyaWNlLWxvZ28tZ3JlZW48L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8ZyBpZD0iQXJ0Ym9hcmQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01Ny4wMDAwMDAsIC01OC4wMDAwMDApIiBmaWxsPSIjMDA5Zjc3Ij4KICAgICAgICAgICAgPHBhdGggZD0iTTM0NS41MzcxNDIsMTQ2LjgwMTIwMSBMMzYxLjkwNzEyMywxNDYuODAxMjAxIEwzNjEuOTA3MTIzLDg1LjYwMDkzNzIgTDM0NS41MzcxNDIsODUuNjAwOTM3MiBMMzQ1LjUzNzE0MiwxNDYuODAxMjAxIFogTTM1My44NDUzMDMsNTkuMTk4Nzk5MiBDMzQ4LjI2NTE4Niw1OS4xOTg3OTkyIDM0My44MDE4OTMsNjMuNTE5NTI4NSAzNDMuODAxODkzLDY4LjkxOTM0MTcgQzM0My44MDE4OTMsNzQuMzE5MTU1IDM0OC4yNjUxODYsNzguNjQwNDMzNSAzNTMuODQ1MzAzLDc4LjY0MDQzMzUgQzM1OS40MjU0Miw3OC42NDA0MzM1IDM2My44OTA0MjgsNzQuMzE5MTU1IDM2My44OTA0MjgsNjguOTE5MzQxNyBDMzYzLjg5MDQyOCw2My41MTk1Mjg1IDM1OS40MjU0Miw1OS4xOTg3OTkyIDM1My44NDUzMDMsNTkuMTk4Nzk5MiBaIE00ODkuMDA0Mzg5LDEwOS41OTk0MzYgQzQ4OS4wMDQzODksMTAzLjM1OTQyIDQ4Ni4wMjYwMDIsOTcuMDAwNzg3MSA0NzUuOTgyNTkyLDk3LjAwMDc4NzEgQzQ2Ny4zMDI5MTgsOTcuMDAwNzg3MSA0NjMuMjA5NDIyLDEwMy4yMzkxNTYgNDYyLjQ2NTI1NCwxMDkuNTk5NDM2IEw0ODkuMDA0Mzg5LDEwOS41OTk0MzYgWiBNNTA1LDEyMC4xNjA3MzEgTDQ2Mi4yMTY2MjcsMTIwLjE2MDczMSBDNDYyLjU4OTI4MiwxMzAuMTIxODAyIDQ2OC41NDE0ODMsMTM1LjE2MTM3MSA0NzYuMTA2NjIsMTM1LjE2MTM3MSBDNDgzLjA0OTkwMiwxMzUuMTYxMzcxIDQ4OC4zODE5NjMsMTMxLjgwMTEwOSA0OTEuMjM0MDM1LDEyNi4wNDEwNTIgTDUwNC4zNzkyODgsMTMyLjUyMTU5NyBDNDk4Ljc5OTE3MSwxNDEuOTk5OTYzIDQ5MC4yNDI5NTQsMTQ4IDQ3Ni40NzY5ODksMTQ4IEM0NTYuMTQwMzk4LDE0OCA0NDUuNjAwODc1LDEzNS41MjE2MTUgNDQ1LjYwMDg3NSwxMTUuODQwMDAxIEM0NDUuNjAwODc1LDk2LjI4MDI5OTUgNDU3LjUwNTg0OSw4NC4zOTk5NDE0IDQ3NS42MDgyMjEsODQuMzk5OTQxNCBDNDkyLjk3MDk5OSw4NC4zOTk5NDE0IDUwNSw5My40MDA1NDU1IDUwNSwxMTIuOTU5Njk4IEw1MDUsMTIwLjE2MDczMSBaIE00MDguNDA2NzY0LDk3LjcxOTA3ODIgQzQxNC4zNTg5NjUsOTcuNzE5MDc4MiA0MTguMjAxNTQ3LDEwMC44MzkzNjEgNDIwLjMwODg4LDEwNi45NTk2NjIgTDQzNS40MzgwMSwxMDMuMzU5NDIgQzQzMS4zNDY4LDkwLjY0MDUwNjcgNDIzLjAzOTIxLDg0LjM5OTk0MTQgNDA3LjkxMDA4LDg0LjM5OTk0MTQgQzM4OC44MTI2MjYsODQuMzk5OTQxNCAzNzcuMjgwMzA4LDk2LjQwMDU2MzggMzc3LjI4MDMwOCwxMTYuMjAwMjQ1IEMzNzcuMjgwMzA4LDEzNS45OTk5MjcgMzg4LjgxMjYyNiwxNDggNDA3LjkxMDA4LDE0OCBDNDIzLjAzOTIxLDE0OCA0MzEuMzQ2OCwxNDEuNzYxNjMxIDQzNS40MzgwMSwxMjkuMDQxMDcgTDQyMC4zMDg4OCwxMjUuNDQwMjggQzQxOC4yMDE1NDcsMTMxLjU2MDU4MSA0MTQuMzU4OTY1LDEzNC42ODA4NjMgNDA4LjQwNjc2NCwxMzQuNjgwODYzIEMzOTguOTgxNzc5LDEzNC42ODA4NjMgMzk0LjM5MjE3MSwxMjguNTYwNTYyIDM5NC4zOTIxNzEsMTE2LjIwMDI0NSBDMzk0LjM5MjE3MSwxMDMuODM5Mzc5IDM5OS4xMDM1MjEsOTcuNzE5MDc4MiA0MDguNDA2NzY0LDk3LjcxOTA3ODIgWiBNMjk1LjgxNTYzMSwxNDYuODAxMjAxIEwzMTIuMTgzMzI2LDE0Ni44MDEyMDEgTDMxMi4xODMzMjYsOTguOTIwMDc0IEwzMzQuMTMzNDI0LDk4LjkyMDA3NCBMMzM0LjEzMzQyNCw4NS42MDA5MzcyIEwyOTUuODE1NjMxLDg1LjYwMDkzNzIgTDI5NS44MTU2MzEsMTQ2LjgwMTIwMSBaIE04MS4zMDU0ODczLDcxLjMxOTEzNjcgQzg0LjY1NDI0MzQsNzEuMzE5MTM2NyA4Ni44ODU2MDQzLDcyLjI3OTYwMzkgODguOTkyOTM3Miw3My45NjExMDc4IEw5NS40NDE4MjE3LDYyLjkxOTMwNTEgQzkwLjg1NDUwMDMsNTkuNzk5MDIyNSA4NS4xNTAzNTU0LDU4IDc4LjgyNjA3MDQsNTggQzY0LjY4NzQ0OTgsNTggNTcsNjYuMTU5MzAyOSA1Nyw3OC4xNTk5MjUzIEw1NywxNDYuODAxMjAxIEw3My4zNjc2OTUzLDE0Ni44MDEyMDEgTDczLjM2NzY5NTMsOTguOTIwMDc0IEw5Mi4zNDE2OTMyLDk4LjkyMDA3NCBMOTIuMzQxNjkzMiw4NS42MDA5MzcyIEw3My4zNjc2OTUzLDg1LjYwMDkzNzIgTDczLjM2NzY5NTMsNzkuOTU4OTQ3OCBDNzMuMzY3Njk1Myw3NC41NTkxMzQ1IDc1Ljk3Mzk5OCw3MS4zMTkxMzY3IDgxLjMwNTQ4NzMsNzEuMzE5MTM2NyBaIE0xOTguNDgxNjU2LDEzNC42ODA4NjMgQzE5My43NjgwMiwxMzQuNjgwODYzIDE5MC4xNzE3OCwxMzIuNjM5NjY1IDE5MC4xNzE3OCwxMjYuMDQxMDUyIEwxOTAuMTcxNzgsOTguOTIwMDc0IEwyMTAuMzg0MzQzLDk4LjkyMDA3NCBMMjEwLjM4NDM0Myw4NS42MDA5MzcyIEwxOTAuMTcxNzgsODUuNjAwOTM3MiBMMTkwLjE3MTc4LDYyLjc5OTA0MDggTDE3My44MDE3OTgsNjIuNzk5MDQwOCBMMTczLjgwMTc5OCwxMjcuOTYwMzM5IEMxNzMuODAxNzk4LDEzOS45NjA0MTIgMTgxLjQ5MTUzNCwxNDggMTk1LjYyNzI5NywxNDggQzIwMy4xOTMwMDUsMTQ4IDIwOS4wMjExNzgsMTQ1LjQ4MDQ5IDIxMy4yMzgxMywxNDIuMzYwMjA3IEwyMDYuOTEzODQ1LDEzMS4wODAwNzIgQzIwNC4zMDk4MjksMTMzLjM2MDE1MiAyMDIuMjAwMjEsMTM0LjY4MDg2MyAxOTguNDgxNjU2LDEzNC42ODA4NjMgWiBNMjYyLjA5MTQ0NSwxMjEuNzE5Nzc0IEMyNjIuMDkxNDQ1LDEzMS4wODAwNzIgMjU4LjI0ODg2NCwxMzQuNjgwODYzIDI1MC45MzEyMTIsMTM0LjY4MDg2MyBDMjQzLjYxNDEzMSwxMzQuNjgwODYzIDIzOS42NDc1MjEsMTMxLjA4MDA3MiAyMzkuNjQ3NTIxLDEyMS43MTk3NzQgTDIzOS42NDc1MjEsODUuNjAwOTM3MiBMMjIzLjI3NzU0LDg1LjYwMDkzNzIgTDIyMy4yNzc1NCwxMjEuNTk5NTA5IEMyMjMuMjc3NTQsMTM5LjM2MDE4OSAyMzIuNzAxOTUzLDE0OCAyNTAuOTMxMjEyLDE0OCBDMjY5LjE2MDQ3LDE0OCAyNzguNDYxNDI3LDEzOS4zNjAxODkgMjc4LjQ2MTQyNywxMjEuNTk5NTA5IEwyNzguNDYxNDI3LDg1LjYwMDkzNzIgTDI2Mi4wOTE0NDUsODUuNjAwOTM3MiBMMjYyLjA5MTQ0NSwxMjEuNzE5Nzc0IFogTTE0MS4zMjA3NTEsODUuNjAwOTM3MiBMMTU3LjY5MDczMiw4NS42MDA5MzcyIEwxNTcuNjkwNzMyLDEyMS41OTk1MDkgQzE1Ny42OTA3MzIsMTM5LjM2MDE4OSAxNDguMzg4MDYxLDE0OCAxMzAuMTYwNTE3LDE0OCBDMTExLjkyOTU0NCwxNDggMTAyLjUwNjg0NSwxMzkuMzYwMTg5IDEwMi41MDY4NDUsMTIxLjU5OTUwOSBMMTAyLjUwNjg0NSw4NS42MDA5MzcyIEwxMTguODc0NTQxLDg1LjYwMDkzNzIgTDExOC44NzQ1NDEsMTIxLjcxOTc3NCBDMTE4Ljg3NDU0MSwxMzEuMDgwMDcyIDEyMi44NDM0MzcsMTM0LjY4MDg2MyAxMzAuMTYwNTE3LDEzNC42ODA4NjMgQzEzNy40NzU4ODMsMTM0LjY4MDg2MyAxNDEuMzIwNzUxLDEzMS4wODAwNzIgMTQxLjMyMDc1MSwxMjEuNzE5Nzc0IEwxNDEuMzIwNzUxLDg1LjYwMDkzNzIgWiIgaWQ9ImZ1dHVyaWNlLWxvZ28tZ3JlZW4iPjwvcGF0aD4KICAgICAgICA8L2c+CiAgICA8L2c+Cjwvc3ZnPg=="
+        />
+        <span>Calculus</span>
+      </h1>
+      <form action="/calculus" method="post" role="form">
+        <div class="form-group">
+          <label for="calculus-string">Calculus String</label>
+          <input
+            type="text"
+            class="form-control"
+            id="calculus-string"
+            name="calculus-string"
+            aria-describedby="calculusHelp"
           />
-        </h4>
-      </div>
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>Serverless WSGI:</h4>
-          <p>
-            Deploy WSGI apps to AWS Lambda <br /><a
-              href="https://github.com/logandk/serverless-wsgi"
-              >Read More</a
-            >
-          </p>
+          <small id="calculusHelp" class="form-text text-muted"
+            >Example: 2 * (23/(3*3))- 23 * (2*3)</small
+          >
         </div>
-        <div class="col-lg-6">
-          <h4>Serverless Python Requirements:</h4>
-          <p>
-            Utility for compiling Python libs with your functions<br /><a
-              href="https://github.com/UnitedIncome/serverless-python-requirements"
-              >Read More</a
-            >
-          </p>
-        </div>
-      </div>
-      <footer class="footer">
-        <p>© Serverless 2020</p>
-      </footer>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
     </div>
     <!-- /container -->
   </body>

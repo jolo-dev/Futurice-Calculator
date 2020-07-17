@@ -1,6 +1,6 @@
-# Serverless-Flask
+# Futurice Calculator
 
-The fastest way to a Flask application with [Serverless](https://github.com/serverless/serverless).
+This is a calculator built with [Python's Flask](https://flask.palletsprojects.com/en/1.1.x/) with is deployable by using [Serverless](https://github.com/serverless/serverless) on AWS
 
 ## Usage
 
@@ -9,8 +9,7 @@ However, this is still recommended.
 
 ```bash
 $ npm install -g serverless # Optional
-$ (npx) serverless install --url https://github.com/jolo-dev/serverless-flask --name my-flask-app
-$ cd my-flask-app && npm run setup
+$ cd Futurice-Calculator && npm run setup
 <answer prompts>
 $ (npx) serverless deploy
 ```
@@ -26,11 +25,11 @@ endpoints:
   ANY - https://abc6defghi.execute-api.us-east-1.amazonaws.com/dev/{proxy+}
 ```
 
-Copy paste into your browser, and _voila_!
+Copy paste into your browser, _et voila_!
 
 ## Local development
 
-To develop locally, create a virtual environment and install your dependencies:
+To develop locally, create a virtual environment and install your dependencies (assuming Python3):
 
 ```bash
 virtualenv venv

@@ -1,4 +1,4 @@
-from routes.calculus import configure_routes, check_padding
+from routes.calculus import configure_routes, check_padding, convert_to_base64
 from flask import url_for, Flask
 import json
 import pytest
@@ -68,3 +68,8 @@ def test_calculus_not_a_formula(client):
     mocked_result = {"result": "Error with your input: QUJDRA==", "status": 406}
     assert response.status_code == 406
     assert json.loads(response.get_data()) == mocked_result
+
+
+def test_convert_string_to_base64(client):
+    b64_string = convert_to_base64("1")
+    assert b64_string == b"MQ=="
